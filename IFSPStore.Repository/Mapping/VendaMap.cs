@@ -28,7 +28,8 @@ namespace IFSPStore.Repository.Mapping
             builder.Property(prop => prop.ValorUnitario).IsRequired();
             builder.Property(prop => prop.ValorTotal).IsRequired();
             builder.HasOne(prop => prop.Produto);
-            builder.HasOne(prop => prop.Venda).WithMany(prop => prop.Items)
+            builder.HasOne(prop => prop.Venda)
+                .WithMany(prop => prop.Items)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

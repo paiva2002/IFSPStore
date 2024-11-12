@@ -8,7 +8,7 @@ namespace IFSPStore.Repository.Mapping
 {
     public class ProdutoMap : IEntityTypeConfiguration<Produto>
     {
-        public void configure(EntityTypeBuilder<Produto> builder)   
+        public void Configure(EntityTypeBuilder<Produto> builder)   
         {
             builder.ToTable("Produto");
             builder.HasKey(x => x.Id);
@@ -17,13 +17,8 @@ namespace IFSPStore.Repository.Mapping
             builder.Property(x => x.Quantidade);
             builder.Property(x => x.Datacompra);
             builder.Property(x => x.UnidadeVenda).HasMaxLength(10);
-            builder.HasOne(x => x.Grupo).WithMany().HasConstraintName("nome_chave_estrageira");
+            builder.HasOne(x => x.Grupo);
 
-        }
-
-        public void Configure(EntityTypeBuilder<Produto> builder)
-        {
-            throw new NotImplementedException();
         }
     }
 }
