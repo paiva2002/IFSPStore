@@ -14,7 +14,8 @@ namespace IFSPStore.Repository.Mapping
             builder.Property(prop => prop.Data).IsRequired();
             builder.Property(prop => prop.ValorTotal).IsRequired();
             builder.HasOne(prop => prop.Cliente);
-            builder.HasMany(prop => prop.Items).WithOne(propa => propa.Venda)
+            builder.HasMany(prop => prop.Items)
+                .WithOne(propa => propa.Venda)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

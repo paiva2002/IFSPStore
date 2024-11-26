@@ -45,7 +45,7 @@ namespace IFSPStore.Test
             return services.BuildServiceProvider();
         }
         [TestMethod]
-        public void TestInsertUsuario() 
+        public void TestInsertUsuario()
         {
             var sp = ConfigureServices();
             var usuarioService = sp.GetService<IBaseService<Usuario>>();
@@ -55,7 +55,7 @@ namespace IFSPStore.Test
                 Nome = "Lucas",
                 Login = "Paiva",
                 Email = "lucaspaiva@gmail.com",
-                Senha = "123Paiv@",
+                Senha = "123Paiv?",
                 DataCadastro = DateTime.Now
             };
 

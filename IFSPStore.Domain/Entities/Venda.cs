@@ -30,9 +30,9 @@ namespace IFSPStore.Domain.Entities
         public VendaItem()
         {
         }
-        public VendaItem(int id, Produto? produto, int quantidade, float valorUnitario, float valortotal, Venda? venda)
+        public VendaItem(int id, Produto? produto, int quantidade, float valorUnitario, float valortotal, Venda? venda) : base(id)
         {
-            Id = id;
+            
             Produto = produto;
             Quantidade = quantidade;
             ValorUnitario = valorUnitario;

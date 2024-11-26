@@ -8,9 +8,9 @@ namespace IFSPStore.Domain.Entities
         public Grupo()  
         {
         }
-        public Grupo(int id, string nome) 
+        public Grupo(int id, string nome) : base(id)
         {
-            Id = id;
+          
             Nome = nome;
         }
         public string? Nome {  get; set; }

@@ -9,9 +9,8 @@ namespace IFSPStore.Domain.Entities
         public Usuario()
         {
         }
-        public Usuario(int id, string nome, string senha, string login, string email, DateTime dataCadastro, DateTime dataLogin, bool ativo ) 
+        public Usuario(int id, string nome, string senha, string login, string email, DateTime dataCadastro, DateTime dataLogin, bool ativo ) : base(id)
         { 
-            Id = id;
             Nome = nome;
             Senha = senha;
             Login = login;

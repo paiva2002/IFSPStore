@@ -9,9 +9,9 @@ namespace IFSPStore.Domain.Entities
         public Cidade()//construtor cidade vazio
         {
         }
-        public Cidade(int id, string nome, string estado)
+        public Cidade(int id, string nome, string estado) : base(id)
         {
-            Id = id;
+           
             Nome = nome;
             Estado = estado;
         }

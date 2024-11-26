@@ -9,9 +9,9 @@ namespace IFSPStore.Domain.Entities
         public Cliente()
         {
         }
-        public Cliente(int id, string nome, string endereco, string bairro, string documento,Cidade cidade)
+        public Cliente(int id, string nome, string endereco, string bairro, string documento,Cidade cidade) : base(id)
         {
-            Id = id;
+           
             Nome = nome;
             Endereco = endereco;
             Bairro = bairro;
