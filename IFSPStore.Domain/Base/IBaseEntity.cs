@@ -1,5 +1,4 @@
-﻿
-namespace IFSPStore.Domain.Base
+﻿namespace IFSPStore.Domain.Base
 {
     public interface IBaseEntity
     {

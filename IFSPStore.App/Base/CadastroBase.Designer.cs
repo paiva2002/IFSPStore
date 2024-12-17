@@ -94,7 +94,7 @@
             btnCancelar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnCancelar.UseAccentColor = false;
             btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
+          
             // 
             // btnSalvar
             // 
@@ -116,7 +116,7 @@
             btnSalvar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnSalvar.UseAccentColor = false;
             btnSalvar.UseVisualStyleBackColor = true;
-            btnSalvar.Click += btnSalvar_Click;
+           
             // 
             // tabPage2
             // 
@@ -162,7 +162,7 @@
             btnExcluir.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnExcluir.UseAccentColor = false;
             btnExcluir.UseVisualStyleBackColor = true;
-            btnExcluir.Click += btnExcluir_Click;
+            
             // 
             // btnEditar
             // 
@@ -184,7 +184,7 @@
             btnEditar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnEditar.UseAccentColor = false;
             btnEditar.UseVisualStyleBackColor = true;
-            btnEditar.Click += btnEditar_Click;
+            
             // 
             // btnNovo
             // 
@@ -206,7 +206,7 @@
             btnNovo.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnNovo.UseAccentColor = false;
             btnNovo.UseVisualStyleBackColor = true;
-            btnNovo.Click += btnNovo_Click;
+           
             // 
             // imageList1
             // 

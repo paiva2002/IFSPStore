@@ -93,6 +93,16 @@ namespace IFSPStore.App.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cliente1 {
+            get {
+                object obj = ResourceManager.GetObject("cliente1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap crescimento {
             get {
                 object obj = ResourceManager.GetObject("crescimento", resourceCulture);
@@ -113,6 +123,16 @@ namespace IFSPStore.App.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Imagem_do_WhatsApp_de_2024_09_08_à_s__15_46_14_a9530fa4 {
+            get {
+                object obj = ResourceManager.GetObject("Imagem do WhatsApp de 2024-09-08 à(s) 15.46.14_a9530fa4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
@@ -123,9 +143,29 @@ namespace IFSPStore.App.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap perfil_de_usuario {
+            get {
+                object obj = ResourceManager.GetObject("perfil-de-usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap register {
             get {
                 object obj = ResourceManager.GetObject("register", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap senha {
+            get {
+                object obj = ResourceManager.GetObject("senha", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

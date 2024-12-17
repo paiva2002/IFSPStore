@@ -1,4 +1,5 @@
 ﻿
+
 namespace IFSPStore.Domain.Base
 {
     //clase abstract não pode ser instânciada

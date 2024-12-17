@@ -83,7 +83,7 @@
             txtId.BackgroundImageLayout = ImageLayout.None;
             txtId.CharacterCasing = CharacterCasing.Normal;
             txtId.Depth = 0;
-            txtId.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtId.HideSelection = true;
             txtId.Hint = "Id";
             txtId.LeadingIcon = null;
@@ -93,7 +93,7 @@
             txtId.Name = "txtId";
             txtId.PasswordChar = '\0';
             txtId.PrefixSuffixText = null;
-            txtId.ReadOnly = false;
+            txtId.ReadOnly = true;
             txtId.RightToLeft = RightToLeft.No;
             txtId.SelectedText = "";
             txtId.SelectionLength = 0;
@@ -121,7 +121,7 @@
             cboEstado.Hint = "Estado";
             cboEstado.IntegralHeight = false;
             cboEstado.ItemHeight = 43;
-            cboEstado.Items.AddRange(new object[] { "SP", "AM", "PI", "MG", "RO", "MG", "DT" });
+            cboEstado.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MS", "MT", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
             cboEstado.Location = new Point(509, 19);
             cboEstado.MaxDropDownItems = 4;
             cboEstado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;

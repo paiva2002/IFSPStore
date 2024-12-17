@@ -5,6 +5,8 @@ namespace IFSPStore.Domain.Entities
 {
     public class Produto : BaseEntity<int>
     {
+        public DateTime txtDataCompra;
+
         public Produto()
         {   
         }

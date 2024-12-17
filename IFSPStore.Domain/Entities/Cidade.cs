@@ -11,7 +11,7 @@ namespace IFSPStore.Domain.Entities
         }
         public Cidade(int id, string nome, string estado) : base(id)
         {
-           
+            Id = id;
             Nome = nome;
             Estado = estado;
         }

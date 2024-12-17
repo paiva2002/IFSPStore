@@ -40,12 +40,15 @@
             clienteToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator4 = new ToolStripSeparator();
             vendaToolStripMenuItem = new ToolStripMenuItem();
+            relatToolStripMenuItem = new ToolStripMenuItem();
+            ajudaToolStripMenuItem = new ToolStripMenuItem();
+            sToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, relatToolStripMenuItem, ajudaToolStripMenuItem, sToolStripMenuItem });
             menuStrip1.Location = new Point(3, 64);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(794, 24);
@@ -66,6 +69,7 @@
             usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
             usuárioToolStripMenuItem.Size = new Size(180, 22);
             usuárioToolStripMenuItem.Text = "Usuário";
+            usuárioToolStripMenuItem.Click += usuárioToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
@@ -78,6 +82,7 @@
             grupoDeProdutoToolStripMenuItem.Name = "grupoDeProdutoToolStripMenuItem";
             grupoDeProdutoToolStripMenuItem.Size = new Size(180, 22);
             grupoDeProdutoToolStripMenuItem.Text = "Grupo de produto";
+            grupoDeProdutoToolStripMenuItem.Click += grupoDeProdutoToolStripMenuItem_Click;
             // 
             // produtoToolStripMenuItem
             // 
@@ -85,6 +90,7 @@
             produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             produtoToolStripMenuItem.Size = new Size(180, 22);
             produtoToolStripMenuItem.Text = "Produto";
+            produtoToolStripMenuItem.Click += produtoToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
@@ -110,6 +116,7 @@
             clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             clienteToolStripMenuItem.Size = new Size(180, 22);
             clienteToolStripMenuItem.Text = "Cliente";
+            clienteToolStripMenuItem.Click += clienteToolStripMenuItem_Click;
             // 
             // toolStripSeparator4
             // 
@@ -122,6 +129,25 @@
             vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             vendaToolStripMenuItem.Size = new Size(180, 22);
             vendaToolStripMenuItem.Text = "Venda";
+            vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
+            // 
+            // relatToolStripMenuItem
+            // 
+            relatToolStripMenuItem.Name = "relatToolStripMenuItem";
+            relatToolStripMenuItem.Size = new Size(71, 20);
+            relatToolStripMenuItem.Text = "Relatórios";
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            ajudaToolStripMenuItem.Size = new Size(50, 20);
+            ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
+            // sToolStripMenuItem
+            // 
+            sToolStripMenuItem.Name = "sToolStripMenuItem";
+            sToolStripMenuItem.Size = new Size(38, 20);
+            sToolStripMenuItem.Text = "Sair";
             // 
             // FormPrincipal
             // 
@@ -135,6 +161,8 @@
             MainMenuStrip = menuStrip1;
             Name = "FormPrincipal";
             Text = "Sistema IFSP Store";
+            WindowState = FormWindowState.Maximized;
+            FormClosing += FormPrincipal_FormClosing;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -155,5 +183,8 @@
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripSeparator toolStripSeparator4;
+        private ToolStripMenuItem relatToolStripMenuItem;
+        private ToolStripMenuItem ajudaToolStripMenuItem;
+        private ToolStripMenuItem sToolStripMenuItem;
     }
 }

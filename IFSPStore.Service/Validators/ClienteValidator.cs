@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IFSPStore.Service.Validators
 {
-    internal class ClienteValidator : AbstractValidator<Cliente>
+    public class ClienteValidator : AbstractValidator<Cliente>
     {
         public ClienteValidator() 
         {

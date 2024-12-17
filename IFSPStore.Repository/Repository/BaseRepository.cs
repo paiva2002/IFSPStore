@@ -1,12 +1,10 @@
-﻿
-using IFSPStore.Domain.Base;
+﻿using IFSPStore.Domain.Base;
 using IFSPStore.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace IFSPStore.Repository.Repository
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity
-        : BaseEntity<int>
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : BaseEntity<int>
     {
         protected readonly MySqlContext _mySqlcontext;
 
@@ -20,9 +18,24 @@ namespace IFSPStore.Repository.Repository
             _mySqlcontext.Attach(obj);
         }
 
+
         public void ClearChangeTracker()
         {
             _mySqlcontext.ChangeTracker.Clear();
+        }
+
+        public void Insert(TEntity entity)
+        {
+            //_mySqlcontext.ChangeTracker.Clear();
+            _mySqlcontext.Set<TEntity>().Add(entity);
+            _mySqlcontext.SaveChanges();
+        }
+
+        public void Update(TEntity entity)
+        {
+            //_mySqlcontext.ChangeTracker.Clear();
+            _mySqlcontext.Entry(entity).State = EntityState.Modified;
+            _mySqlcontext.SaveChanges();
         }
 
         public void Delete(object id)
@@ -31,18 +44,20 @@ namespace IFSPStore.Repository.Repository
             _mySqlcontext.SaveChanges();
         }
 
-        public void Insert(TEntity entity)
+        public IList<TEntity> Select(bool tracking = true, IList<string>? includes = null)
         {
-            _mySqlcontext.Set<TEntity>().Add(entity);
-            _mySqlcontext.SaveChanges();
-        }
-
-        public IList<TEntity> Select(IList<string>? includes = null)
-        {
-            var dbContext = _mySqlcontext.Set<TEntity>().AsQueryable();
-            if(includes != null) 
+            IQueryable<TEntity> dbContext;
+            if (tracking)
             {
-                foreach(var include in includes)
+                dbContext = _mySqlcontext.Set<TEntity>().AsQueryable();
+            }
+            else
+            {
+                dbContext = _mySqlcontext.Set<TEntity>().AsNoTracking().AsQueryable();
+            }
+            if (includes != null)
+            {
+                foreach (var include in includes)
                 {
                     dbContext = dbContext.Include(include);
                 }
@@ -50,9 +65,18 @@ namespace IFSPStore.Repository.Repository
             return dbContext.ToList();
         }
 
-        public TEntity Select(object id, IList<string>? includes = null)
+        public TEntity Select(object id, bool tracking = true, IList<string>? includes = null)
         {
-            var dbContext = _mySqlcontext.Set<TEntity>().AsQueryable();
+            IQueryable<TEntity> dbContext;
+            if (tracking)
+            {
+                dbContext = _mySqlcontext.Set<TEntity>().AsQueryable();
+            }
+            else
+            {
+                dbContext = _mySqlcontext.Set<TEntity>().AsNoTracking().AsQueryable();
+            }
+
             if (includes != null)
             {
                 foreach (var include in includes)
@@ -61,12 +85,6 @@ namespace IFSPStore.Repository.Repository
                 }
             }
             return dbContext.ToList().Find(x => x.Id == (int)id);
-        }
-
-        public void Update(TEntity entity)
-        {
-            _mySqlcontext.Entry(entity).State = EntityState.Modified;
-            _mySqlcontext.SaveChanges();
         }
     }
 }
